@@ -27,6 +27,16 @@
 	vnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
 	map <leader><leader> <Esc>/<++><Enter>"_c4l
 
+" Set cursor
+	let &t_SI = "\e[5 q"
+	let &t_EI = "\e[1 q"
+
+" Optionally reset the cursor on start:
+"	augroup myCmds
+"	au!
+"	autocmd VimEnter * silent !echo -ne "\e[2 q"
+"	augroup END
+
 " Display status-bar
 	set laststatus=2
 
