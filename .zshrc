@@ -8,6 +8,9 @@ alias cp="cp -i"
 alias python='python3'
 alias pip='pip3'
 
+# Add flutter to path
+export PATH="$PATH:/Users/crow/flutter/bin"
+
 # Ben's (copy of Luke Smith's) config for the Zoomer Shell
 
 # Disable error beeps
@@ -20,7 +23,15 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/.zsh_history
+setopt HIST_IGNORE_SPACE
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups # ignore duplication command history list
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history
 
 # Basic auto/tab complete:
 autoload -U compinit
